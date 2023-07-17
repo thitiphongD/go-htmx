@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="icon" href="/static/images/chainsaw-man.jpg">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <div class="name-project">
+                    <img src="/static/images/icon.jpg">
+                    <!-- <p class="name-grey">
+                        << /p> -->
+                    <p class="name-blue">GO</p>
+                    <p class="name-grey">HTM<span class="name-blue">X</span></p>
+                    <!-- <p class="name-blue">></p> -->
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+
+        <div class="tab-container">
+            <button class="tab-button" onclick="openTab(event, 'tab1')">Sign In</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Register</button>
+        </div>
+
+        <div id="tab1" class="tab-content">
+            <div class="login-container">
+                <form id="loginForm" action="/login" method="POST">
+                    <div class="input-block">
+                        <div>
+                            <p>Email</p>
+                            <input type="text" id="email" name="email" required>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Password</p>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                            <button class="sign-in-btn" type="submit">Sign In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <div class="login-container">
+                <form id="registerForm" action="/register" method="POST">
+                    <div class="input-block">
+                        <div>
+                            <p>Email</p>
+                            <input type="text" id="email" name="email" required>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Password</p>
+                            <input type="text" id="password" name="password" required>
+                        </div>
+                        <br>
+
+                        <div>
+                            <p>Confirm Password</p>
+                            <input type="text" id="confirm_password" name="confirm_password" required>
+                        </div>
+                        <br>
+                        <div>
+                            <p>First name</p>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+                        <br>
+                        <div>
+                            <p>Last name</p>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+
+                        <br>
+
+                        <div style="text-align: center;">
+                            <button class="sign-in-btn" type="submit">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/login.js"></script>
+
+</body>
+
+</html>
